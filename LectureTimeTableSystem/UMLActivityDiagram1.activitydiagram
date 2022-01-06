@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c5884c06-7f88-4d6a-b16a-22cf882571a1" name="Activity1" linkedPackageId="ee9ddace-1105-499d-b099-e36528bf298d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="4bd6b523-adfe-4c20-a17d-a1702e27706e">
+      <elementDefinition Id="d19ac719-9ecf-40a5-933e-f64053958ba4" />
+      <body>check permisson</body>
+      <annotatedElements>
+        <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="b4397088-9944-454d-b2b2-96b52fb7debc">
+      <profileInstance Id="61cce84c-5f49-417f-9804-c517fe0c975b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="b9017d44-52f2-4b6b-a8a2-b8aa7a134333">
+      <profileInstance Id="c465cf54-6fea-4c56-9dbe-40a088cb3269" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="7b537255-1e29-40e0-90ce-40fa92b9defb" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c2360848-28be-4c0e-8d40-61832b613b98" />
+        <nodes>
+          <initialNode Id="517ca56f-091c-4610-96e5-2b5cc253c526" name="Initial1" isLeaf="false">
+            <elementDefinition Id="d6d1d2dc-56ae-4ce8-96b4-337fb808af6f" />
+            <flowNodeTargets>
+              <controlFlow Id="faef4240-0c7d-44a2-8fde-01e354ebfac4" isLeaf="false">
+                <opaqueActionMoniker Id="bd147e02-ed68-4c9f-87ba-0045ad8e1afc" LastKnownName="Login to the time table management system" />
+                <elementDefinition Id="9386e3bd-e313-410f-8703-e1b94311edbf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="bd147e02-ed68-4c9f-87ba-0045ad8e1afc" name="Login to the time table management system" isLeaf="false">
+            <elementDefinition Id="93dd5565-9a1d-4695-b840-541402d8c25e" />
+            <flowNodeTargets>
+              <controlFlow Id="408666b8-1800-4578-b226-2887f7b0d8fd" isLeaf="false">
+                <opaqueActionMoniker Id="9078eafb-8990-4d25-a6fe-2126b7286ba1" LastKnownName="Check user level and permison" />
+                <elementDefinition Id="d0390feb-95de-4a08-9d70-feb855dc6730" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="9078eafb-8990-4d25-a6fe-2126b7286ba1" name="Check user level and permison" isLeaf="false">
+            <elementDefinition Id="c76fc26c-27ca-4ddb-97e4-8b7a2f6b1721" />
+            <flowNodeTargets>
+              <controlFlow Id="312a9dd6-3f54-4eb5-bb58-b6ecb2a7247f" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="92a0d994-e460-44e8-b11a-6db3bbdbea25" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="a9bc7727-0271-4ca6-891e-f4500ad3ece2" name="Ceck for permission" isLeaf="false">
+            <elementDefinition Id="246dc0be-09d2-40f0-a1e0-2c9e97d75474" />
+            <flowNodeTargets>
+              <controlFlow Id="7c241e7b-a4e8-4cc7-811a-5257cb8fdaa3" isLeaf="false">
+                <opaqueActionMoniker Id="e754830f-44ad-44ef-9da9-7fa40f50e0b8" LastKnownName="Manage time table" />
+                <elementDefinition Id="4abae84c-cce6-469a-bf12-bad2f5bc530e" />
+              </controlFlow>
+              <controlFlow Id="3ba40886-c29b-42a1-8fc3-f43b72a61097" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="b57509e0-b742-414c-90dd-8747a36a9c1f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="28681e59-d8d7-4878-957e-ae0a0ac7f666" name="Decision11" isLeaf="false">
+            <elementDefinition Id="91ebefcb-0a74-4721-b359-286f2192aefc" />
+            <flowNodeTargets>
+              <controlFlow Id="902258a4-74e6-44cc-8a91-6e60fb83729d" isLeaf="false">
+                <opaqueActionMoniker Id="d9beae3d-7c56-4d03-a841-896ff4b10aac" LastKnownName="manage attendance" />
+                <elementDefinition Id="4b2ad819-7429-4b91-a4da-700e03e6b050" />
+              </controlFlow>
+              <controlFlow Id="16c549b9-b57b-435c-8fbc-cb104b4b359c" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="fb6b68bf-a4fc-4ce9-95fc-f903b142a00c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="fa292f95-0e19-4990-8862-824ddd1014e2" name="Decision12" isLeaf="false">
+            <elementDefinition Id="a5238c06-2059-4a31-98be-95b05adf6ac1" />
+            <flowNodeTargets>
+              <controlFlow Id="5d0b1d4c-f6da-4c99-840d-d3529b36fd48" isLeaf="false">
+                <opaqueActionMoniker Id="a065de62-e3ea-41cd-9f0c-1e6809e08092" LastKnownName="mamange class" />
+                <elementDefinition Id="252fbc75-fa42-45b7-bd0e-1308dde0dd73" />
+              </controlFlow>
+              <controlFlow Id="40379231-9f96-4f07-8f29-1f22260495d7" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="b432797b-2f82-4b2a-9f9c-abe35642c39c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="0f6073a2-c6c3-461d-b346-6169d201463d" name="Decision13" isLeaf="false">
+            <elementDefinition Id="96aef13a-28e4-40d9-8db0-e89a41a846d7" />
+            <flowNodeTargets>
+              <controlFlow Id="a00dcd07-91df-4604-8bd4-83fd46a2f194" isLeaf="false">
+                <opaqueActionMoniker Id="2d095aa3-72a3-4ced-8ad3-6f2742351e5b" LastKnownName="manage student" />
+                <elementDefinition Id="ac1859e5-46fa-45b2-b6ce-0033981d58d0" />
+              </controlFlow>
+              <controlFlow Id="16080f01-f3c0-42be-b059-bb6ee549567c" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="44d6e143-58f2-4290-85e8-4db90ca2e053" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="8571a683-e2ba-4a46-a3b9-5349c0679186" name="Decision14" isLeaf="false">
+            <elementDefinition Id="5b7c5b1f-a13b-474e-9ead-85baf0487481" />
+            <flowNodeTargets>
+              <controlFlow Id="ccb2f21a-a10e-441b-8c31-0175afb3db37" isLeaf="false">
+                <opaqueActionMoniker Id="28bcd9b4-d814-4a8f-8211-85043faae6f0" LastKnownName="manage subject" />
+                <elementDefinition Id="4f0cfa66-b7c7-4156-8d99-f30b20f9e39b" />
+              </controlFlow>
+              <controlFlow Id="e818ca2b-f196-4de0-9b4b-8b24a8cba919" isLeaf="false">
+                <joinNodeMoniker Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" LastKnownName="Join1" />
+                <elementDefinition Id="cf8f29fa-44a4-4c7c-9239-ae1fc5a8ef61" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e754830f-44ad-44ef-9da9-7fa40f50e0b8" name="Manage time table" isLeaf="false">
+            <elementDefinition Id="4c0c51b6-0fb9-41ea-bf3c-7e9a065598b2" />
+          </opaqueAction>
+          <opaqueAction Id="d9beae3d-7c56-4d03-a841-896ff4b10aac" name="manage attendance" isLeaf="false">
+            <elementDefinition Id="25471084-5166-49f9-a0da-708e564abd8a" />
+          </opaqueAction>
+          <opaqueAction Id="a065de62-e3ea-41cd-9f0c-1e6809e08092" name="mamange class" isLeaf="false">
+            <elementDefinition Id="7430ed58-3e7b-473c-bf00-1b016631658e" />
+          </opaqueAction>
+          <opaqueAction Id="2d095aa3-72a3-4ced-8ad3-6f2742351e5b" name="manage student" isLeaf="false">
+            <elementDefinition Id="176cef6d-04e7-4f6a-a6db-5aa38e75d645" />
+          </opaqueAction>
+          <opaqueAction Id="28bcd9b4-d814-4a8f-8211-85043faae6f0" name="manage subject" isLeaf="false">
+            <elementDefinition Id="456e9041-cafc-4257-844d-776d4c257a09" />
+          </opaqueAction>
+          <joinNode Id="3e3208a1-2de8-48cb-98bb-5d8333cf402e" name="Join1" isLeaf="false">
+            <elementDefinition Id="79f492b0-1aea-493a-972c-a7f08faf87e3" />
+          </joinNode>
+          <opaqueAction Id="b07405b7-7057-485a-989d-9086a537ccf2" name="Logout from this system" isLeaf="false">
+            <elementDefinition Id="ebb1a881-d676-4aa1-81c1-1ed28cbfafd2" />
+            <flowNodeTargets>
+              <controlFlow Id="ed242fd4-ca7b-435b-a51a-7ce8b5397f53" isLeaf="false">
+                <activityFinalNodeMoniker Id="26fa5836-e79b-4117-a569-5474810d2b81" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="6b8da624-aa18-4874-9289-6277c3c36553" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="26fa5836-e79b-4117-a569-5474810d2b81" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="96407961-b3a0-4a1c-990c-19a2d65a3b3d" />
+          </activityFinalNode>
+          <forkNode Id="6bb7d20d-797c-4447-aee9-84d8ff41cb61" name="Fork1" isLeaf="false">
+            <elementDefinition Id="337f6fb5-c40e-4289-86a1-d4a1f1f94fe9" />
+            <flowNodeTargets>
+              <controlFlow Id="263f3303-ea83-4aab-9623-8ceea1330159" isLeaf="false">
+                <opaqueActionMoniker Id="e754830f-44ad-44ef-9da9-7fa40f50e0b8" LastKnownName="Manage time table" />
+                <elementDefinition Id="5e0ce610-be58-451a-a3bc-d30a0743da36" />
+              </controlFlow>
+              <controlFlow Id="ce70df57-c047-4d66-a9fd-15959c7b6cb6" isLeaf="false">
+                <opaqueActionMoniker Id="d9beae3d-7c56-4d03-a841-896ff4b10aac" LastKnownName="manage attendance" />
+                <elementDefinition Id="7816de85-3517-4b62-927b-8da31f70ce22" />
+              </controlFlow>
+              <controlFlow Id="cad85960-a3ae-47ba-84c3-bd674a609e06" isLeaf="false">
+                <opaqueActionMoniker Id="a065de62-e3ea-41cd-9f0c-1e6809e08092" LastKnownName="mamange class" />
+                <elementDefinition Id="2fc5c350-ab15-49ee-86d2-ac9f72568b30" />
+              </controlFlow>
+              <controlFlow Id="9ec3705f-3718-4cdc-aab4-13c4a65e7ccb" isLeaf="false">
+                <opaqueActionMoniker Id="2d095aa3-72a3-4ced-8ad3-6f2742351e5b" LastKnownName="manage student" />
+                <elementDefinition Id="ee90bfb2-2626-429b-8c6f-5da4d58f62d4" />
+              </controlFlow>
+              <controlFlow Id="bf707d98-d4a4-4068-8b2a-2f2f239f5470" isLeaf="false">
+                <opaqueActionMoniker Id="28bcd9b4-d814-4a8f-8211-85043faae6f0" LastKnownName="manage subject" />
+                <elementDefinition Id="8eedb1a2-76e3-4e04-bc55-2b5839654581" />
+              </controlFlow>
+              <controlFlow Id="6d8f55a7-6f9b-47f2-aa79-51294cc7e663" isLeaf="false">
+                <opaqueActionMoniker Id="b07405b7-7057-485a-989d-9086a537ccf2" LastKnownName="Logout from this system" />
+                <elementDefinition Id="f7981548-988d-4d49-a82b-a9afc6a11653" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="ee9ddace-1105-499d-b099-e36528bf298d" name="LectureTimeTableSystem">
+    <elementDefinition Id="4d7c0b33-9831-466e-a332-3afe81be4184" />
+  </package>
+</activityRootModel>
